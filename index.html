@@ -8,48 +8,45 @@
   </head>
   <body>
     
-    <div class="container bg-success vh-100">
+    <div class="container  vh-100">
       <!-- Title -->
       <div class="row text-center">
-        <h1 class="text-light">POKEDEX</h1>
+        <h1 class="text-dark fs-1 fw-bold">POKEDEX</h1>
       </div>
       <!-- Input poke name -->
       <div class="row justify-content-center">
-        <div class="col col-lg-4 col-md-4">
+        <div class="col col-lg-6 col-md-8">
           <div class="input-group input-group-sm mb-3 ">
             <span class="input-group-text" id="inputGroup-sizing-sm">Poke nombre</span>
-            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            <button class="btn btn-success p-2">Agregar</button>
+            <input id="txtPokeName" type="text" class="form-control" 
+            aria-describedby="inputGroup-sizing-sm">
+            <button id="btnAdd" class="btn btn-success p-2">Agregar</button>
           </div>
         </div>
 
       </div>
       <!-- Container pokedex -->
-      <div class="row bg-danger h-50">
-        <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
+      <div id="pokedex" class="row  justify-content-evenly flex-wrap p-4">
+
+
       </div>
-
       
-      
-
     </div>
-
-    
+    <template id="card-template">
+      <!--Card template-->
+      <div class="card shadow-sm p-4" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="Pokemon picture" style="max-height: 100px;">
+        <div class="card-body">
+          <h5 class="card-title">Name Pokemon</h5>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Type: <span class="type">Tipo</span></li>
+          <li class="list-group-item">Weight: <span class="weight">Peso</span></li>
+          <li class="list-group-item">Abilities Amount: <span class="abilities">3</span></li>
+        </ul>
+      </div>
+    </template>
+    <script type="module" src="./js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   </body>
 </html>
